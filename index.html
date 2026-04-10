@@ -5,9 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WinCLIP — Zero-Shot Defect Detection</title>
-    <meta name="description" content="Zero-shot industrial anomaly detection powered by WinCLIP. Upload product images to detect defects without any training data.">
+    <meta name="description"
+        content="Zero-shot industrial anomaly detection powered by WinCLIP. Upload product images to detect defects without any training data.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
     <style>
         /* ============================
            CSS VARIABLES & RESET
@@ -70,8 +72,15 @@
         }
 
         @keyframes meshFloat {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.7; }
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.7;
+            }
         }
 
         /* ============================
@@ -117,8 +126,17 @@
         }
 
         @keyframes pulse {
-            0%, 100% { opacity: 1; transform: scale(1); }
-            50% { opacity: 0.5; transform: scale(0.8); }
+
+            0%,
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            50% {
+                opacity: 0.5;
+                transform: scale(0.8);
+            }
         }
 
         .header h1 {
@@ -165,8 +183,15 @@
             border-radius: 50%;
         }
 
-        .status-dot.green { background: var(--success); box-shadow: 0 0 8px var(--success); }
-        .status-dot.blue { background: var(--accent-primary); box-shadow: 0 0 8px var(--accent-primary); }
+        .status-dot.green {
+            background: var(--success);
+            box-shadow: 0 0 8px var(--success);
+        }
+
+        .status-dot.blue {
+            background: var(--accent-primary);
+            box-shadow: 0 0 8px var(--accent-primary);
+        }
 
         /* ============================
            MAIN GRID
@@ -273,7 +298,8 @@
             overflow: hidden;
         }
 
-        .upload-area:hover, .upload-area.dragover {
+        .upload-area:hover,
+        .upload-area.dragover {
             border-color: var(--accent-primary);
             background: rgba(99, 102, 241, 0.05);
         }
@@ -390,11 +416,18 @@
         }
 
         @keyframes spin {
-            to { transform: rotate(360deg); }
+            to {
+                transform: rotate(360deg);
+            }
         }
 
-        .btn-primary.loading .spinner { display: block; }
-        .btn-primary.loading .btn-text { display: none; }
+        .btn-primary.loading .spinner {
+            display: block;
+        }
+
+        .btn-primary.loading .btn-text {
+            display: none;
+        }
 
         /* ============================
            OUTPUT AREA
@@ -475,10 +508,23 @@
             font-weight: 700;
         }
 
-        .metric-value.normal { color: var(--success); }
-        .metric-value.defect { color: var(--danger); }
-        .metric-value.score { color: var(--accent-primary); }
-        .metric-value.category { color: var(--warning); font-size: 1rem; text-transform: capitalize; }
+        .metric-value.normal {
+            color: var(--success);
+        }
+
+        .metric-value.defect {
+            color: var(--danger);
+        }
+
+        .metric-value.score {
+            color: var(--accent-primary);
+        }
+
+        .metric-value.category {
+            color: var(--warning);
+            font-size: 1rem;
+            text-transform: capitalize;
+        }
 
         /* ============================
            ERROR STATE
@@ -644,7 +690,8 @@
                 WinCLIP Architecture — Zero-Shot Detection
             </div>
             <h1>Defect Detection AI</h1>
-            <p>Upload a product image to detect manufacturing defects using vision-language AI. No training data required.</p>
+            <p>Upload a product image to detect manufacturing defects using vision-language AI. No training data
+                required.</p>
         </header>
 
         <!-- STATUS BAR -->
@@ -683,7 +730,8 @@
                                 <input type="text" class="form-input" id="apiUrl"
                                     placeholder="https://your-username-winclip.hf.space"
                                     value="https://rrs-2002-winclip-defect-detection.hf.space">
-                                <p class="form-hint">Point this to your deployed HF Space. The Gradio API will be used automatically.</p>
+                                <p class="form-hint">Point this to your deployed HF Space. The Gradio API will be used
+                                    automatically.</p>
                             </div>
                         </div>
 
@@ -771,7 +819,7 @@
                             </div>
                             <div class="metric-card">
                                 <div class="metric-label">Threshold</div>
-                                <div class="metric-value score" id="metricThreshold">0.40</div>
+                                <div class="metric-value score" id="metricThreshold">0.75</div>
                             </div>
                         </div>
                     </div>
